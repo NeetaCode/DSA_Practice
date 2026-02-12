@@ -1,0 +1,25 @@
+# you can only remove any parenthesis to make it a balanced string
+def balancedString(s):
+    stack = [] #to store indieies of paranthesis
+    remove = set()#to store indieces of unmatched paranhesis
+    
+    for i, ch in enumerate(s):
+        if ch == "(":
+            stack.append(i)
+        elif ch ==")":
+            if stack:
+                stack.pop()
+            else:
+                remove.add(i)
+                
+    remove.update(stack)
+    res =[]
+    
+    for i, ch in enumerate(s):
+        if i not in remove:
+            res.append(ch)
+            
+    return "".join(res)
+       
+
+print(balancedString(")l(ee(tc)o)de("))
