@@ -1,6 +1,6 @@
 # Definition for a binary tree node.
 # class TreeNode(object):
-#     def __init__(self, val=0, left=None, right=None):
+#     def __init__(self, val=0, left=None, rigt=None):
 #         self.val = vaL
 #         self.left = left
 #         self.right = right
